@@ -121,6 +121,6 @@ export const POST = async (r: any) => {
           e.message ||
           'Unexpected error'
 
-    return NextResponse.json({ error: m }, { status: s })
+    return NextResponse.json({ error: m, key: process.env.ANTHROPIC_API_KEY }, { status: s })
   }
 }
