@@ -182,7 +182,7 @@ export const POST = async (r: any) => {
     // REDUCED max_tokens to avoid huge responses
     const message = await anthropic.messages.create({
       model: 'claude-sonnet-4-5-20250929',
-      max_tokens: 8000, // Much lower than 50000
+      max_tokens: 20000, // Much lower than 50000
       messages: [
         {
           role: 'user',
